@@ -18,19 +18,30 @@
             _Dice2 = value
         End Set
     End Property
-    Private Function DiceRoll()
+
+    Public ReadOnly Property isDouble() As Boolean
+        Get
+            Return (_Dice1 = _Dice2)
+        End Get
+    End Property
+
+    Private Function DiceRoll() As Integer
         Randomize()
         Dim SngChoice As Single
         SngChoice = Rnd()
         SngChoice = SngChoice * 6
-        SngChoice = Math.Ceiling(SngChoice)
-        Return SngChoice
+        Return Math.Round(SngChoice)
     End Function
     Function rollTotal() As Integer
         Dim Dicetotal As Integer
         Dicetotal = _Dice1 + _Dice2
         Return Dicetotal
     End Function
+
+    Sub New()
+        _Dice1 = DiceRoll()
+        _Dice2 = DiceRoll()
+    End Sub
 
 
 End Class
