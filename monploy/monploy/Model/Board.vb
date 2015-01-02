@@ -1,5 +1,9 @@
 ﻿Public Class Board
 
+#Region "Property"
+
+
+
     Private _Name As String
     Public Property Name() As String
         Get
@@ -30,13 +34,60 @@
         End Set
     End Property
 
+    Private _GameStatus As GameStatuses
+    Public Property GameStatus() As GameStatuses
+        Get
+            Return _GameStatus
+        End Get
+        Set(ByVal value As GameStatuses)
+            _GameStatus = value
+
+            'Update Time Stamps
+            Select Case value
+                Case GameStatuses.NotStarted
+                    _CreateDatetime = Now()
+                Case GameStatuses.Started
+                    _StartDatetime = Now()
+            End Select
+        End Set
+    End Property
+
+    Private _CreateDatetime As DateTime
+    Public ReadOnly Property CreateDatetime() As DateTime
+        Get
+            Return _StartDatetime
+        End Get
+    End Property
+
+    Private _StartDatetime As DateTime
+    Public ReadOnly Property StartDate() As DateTime
+        Get
+            Return _StartDatetime
+        End Get
+    End Property
+
+#End Region
 
     Sub New(name As String)
+        Me.GameStatus = GameStatuses.NotStarted
+
 
 
     End Sub
 
+    Sub StartGame(players As List(Of Player))
+        Me.Players = players
+        Me.GameStatus = GameStatuses.Started
+    End Sub
 
 
+    Enum GameStatuses
+        NotStarted
+        Started
+        AwaitngPlayer
+        Process
+    End Enum
 
 End Class
+
+

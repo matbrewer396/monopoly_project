@@ -81,6 +81,17 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Position,SlotName,Colour, Type, Cost, Cost_House, Rent, RentWith1House,RentWith2House,RentWith3House,RentWith5House,RentWithHotel
+        '''0, &quot;Go&quot;, &quot;Green&quot;, Go, 0,0,200,0,0,0,0,0
+        '''1, &quot;mayfair&quot;, &quot;BLUE&quot;, &quot;Standard&quot;, 100.
+        '''</summary>
+        Friend ReadOnly Property BoardPlaces() As String
+            Get
+                Return ResourceManager.GetString("BoardPlaces", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property CC() As System.Drawing.Bitmap
