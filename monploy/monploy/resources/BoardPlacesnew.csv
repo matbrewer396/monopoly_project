@@ -1,6 +1,4 @@
-,,,::STATION,,,With1Station,With2Station,With3Station,With4Station,,
-Position ,SlotName,Groupying,Type,Cost,CostHouse,RentWithNoHouse,RentWith1House,RentWith2House,RentWith3House,RentWith4House,RentWithHotel
-0,Go,NILL,GO,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
+0,Go,NILL,GO,NILL,NILL,-200,NILL,NILL,NILL,NILL,NILL
 1,Old Kent Road,Brown,STANDARD,60,120,6,40,80,160,240,1000
 2,Chest,NILL,CHEST,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
 3,White Chapel,Brown,STANDARD,60,120,6,40,80,160,240,1000

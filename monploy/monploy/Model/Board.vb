@@ -70,14 +70,22 @@
 
     Sub New(name As String)
         Me.GameStatus = GameStatuses.NotStarted
-
-
-
     End Sub
 
     Sub StartGame(players As List(Of Player))
         Me.Players = players
         Me.GameStatus = GameStatuses.Started
+    End Sub
+
+    Sub loadBoardPlaces()
+
+        Dim sr As New IO.StreamReader("C:\Users\matt\git\monopoly_project\monploy\monploy\resources\BoardPlaces.txt")
+        Do While sr.ReadToEnd
+            Dim l As String = sr.ReadLine
+            Dim bp As New BoardPlace(l.Split(","))
+            BoardPlaces.Add(bp)
+        Loop
+
     End Sub
 
 

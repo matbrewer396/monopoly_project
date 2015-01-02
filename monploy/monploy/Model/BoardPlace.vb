@@ -1,6 +1,10 @@
 ﻿Public Class BoardPlace
 
 #Region "Imported Property"
+    'Phase array
+    Sub New(i As String())
+
+    End Sub
 
     Private _Position As Integer
     Public Property Position() As Integer
@@ -52,7 +56,6 @@
         End Set
     End Property
 
-
     Private _CostHouse As Integer
     Public Property CostHouse() As Integer
         Get
@@ -93,7 +96,6 @@
         End Set
     End Property
 
-
     Private _RentWith2House As Integer
     Public Property RentWith2House() As Integer
         Get
@@ -114,7 +116,6 @@
         End Set
     End Property
 
-
     Private _RentWith4House As Integer
     Public Property RentWith4House() As Integer
         Get
@@ -125,7 +126,6 @@
         End Set
     End Property
 
-
     Private _RentWithHotel As Integer
     Public Property RentWithHotel() As Integer
         Get
@@ -135,6 +135,8 @@
             _RentWithHotel = value
         End Set
     End Property
+
+
 
 #End Region
 
