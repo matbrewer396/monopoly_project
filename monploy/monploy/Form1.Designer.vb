@@ -89,14 +89,16 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(144, 267)
+        Me.Button1.Image = Global.monploy.My.Resources.Resources.CC
+        Me.Button1.Location = New System.Drawing.Point(144, 265)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 67)
+        Me.Button1.Size = New System.Drawing.Size(125, 70)
         Me.Button1.TabIndex = 63
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Chance
         '
+        Me.Chance.Image = Global.monploy.My.Resources.Resources.Chance
         Me.Chance.Location = New System.Drawing.Point(13, 265)
         Me.Chance.Name = "Chance"
         Me.Chance.Size = New System.Drawing.Size(125, 70)
