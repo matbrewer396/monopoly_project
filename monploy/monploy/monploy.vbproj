@@ -125,6 +125,7 @@
     <None Include="resources\1 DICE.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\BoardPlacesnew.csv" />
     <None Include="resources\CC.png" />
   </ItemGroup>
   <ItemGroup>

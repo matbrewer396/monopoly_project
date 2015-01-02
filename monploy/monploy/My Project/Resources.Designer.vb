@@ -92,6 +92,22 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to ,,,::STATION,,,With1Station,With2Station,With3Station,With4Station,,
+        '''Position ,SlotName,Groupying,Type,Cost,CostHouse,RentWithNoHouse,RentWith1House,RentWith2House,RentWith3House,RentWith4House,RentWithHotel
+        '''0,Go,NILL,GO,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
+        '''1,Old Kent Road,Brown,STANDARD,60,120,6,40,80,160,240,1000
+        '''2,Chest,NILL,CHEST,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
+        '''3,White Chapel,Brown,STANDARD,60,120,6,40,80,160,240,1000
+        '''4,Income tax,NILL,TAX,NILL,NILL,200,NILL,NILL,NILL,NILL,NILL
+        '''5,King&apos;s Cross [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property BoardPlacesnew() As String
+            Get
+                Return ResourceManager.GetString("BoardPlacesnew", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property CC() As System.Drawing.Bitmap
