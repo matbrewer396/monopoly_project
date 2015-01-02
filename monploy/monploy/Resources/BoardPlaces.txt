@@ -1,0 +1,3 @@
+Position,SlotName,Colour, Type, Cost, Cost_House, Rent, RentWith1House,RentWith2House,RentWith3House,RentWith5House,RentWithHotel
+0, "Go", "Green", Go, 0,0,200,0,0,0,0,0
+1, "mayfair", "BLUE", "Standard", 100
