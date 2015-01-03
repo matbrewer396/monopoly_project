@@ -17,6 +17,7 @@
         LoadPlayer.Add(New Player(txtPlayerName.Text, New PlayerIcon(dtAviableIcons.Rows.Find(cmbIcon.SelectedValue).Item("name") _
                                                                      , dtAviableIcons.Rows.Find(cmbIcon.SelectedValue).Item("path"))))
         lstPlayer.Items.Add(txtPlayerName.Text)
+        lblNumOfPlayer.Text = "Number of Player: " & LoadPlayer.Count
     End Sub
 
     Function NameIsAvaiable(name) As Boolean
