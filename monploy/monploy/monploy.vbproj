@@ -70,17 +70,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmBoard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmBoard.Designer.vb">
+      <DependentUpon>frmBoard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\Board.vb" />
     <Compile Include="Model\BoardPlace.vb" />
     <Compile Include="Model\Move.vb" />
     <Compile Include="Model\Player.vb" />
+    <Compile Include="Model\PlayerIcon.vb" />
     <Compile Include="Model\Roll.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -97,16 +98,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SetupBoard.Designer.vb">
+      <DependentUpon>SetupBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetupBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmBoard.resx">
+      <DependentUpon>frmBoard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupBoard.resx">
+      <DependentUpon>SetupBoard.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
