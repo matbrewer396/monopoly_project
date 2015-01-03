@@ -39,5 +39,9 @@
             MsgBox("More then two player is requied.", MsgBoxStyle.Critical, "More Players")
         End If
 
+        Dim b As New Board(txtPlayerName.Name, LoadPlayer)
+
+        Dim boardForm As New frmBoard(b)
+
     End Sub
 End Class
