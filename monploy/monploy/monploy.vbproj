@@ -70,43 +70,90 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\Board.vb" />
-    <Compile Include="Model\BoardPlace.vb" />
-    <Compile Include="Model\Move.vb" />
-    <Compile Include="Model\Player.vb" />
-    <Compile Include="Model\Roll.vb" />
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
+    <Compile Include="Models\app.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmFirstRoll.Designer.vb">
+      <DependentUpon>FrmFirstRoll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmFirstRoll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Views Controls\DicePic.Designer.vb">
+      <DependentUpon>DicePic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views Controls\DicePic.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\frmBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmBoard.Designer.vb">
+      <DependentUpon>frmBoard.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Board.vb" />
+    <Compile Include="Models\BoardPlace.vb" />
+    <Compile Include="Models\Move.vb" />
+    <Compile Include="Models\Player.vb" />
+    <Compile Include="Models\PlayerIcon.vb" />
+    <Compile Include="Models\Roll.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Views\SetupBoard.Designer.vb">
+      <DependentUpon>SetupBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SetupBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Views Controls\PlayerInfo.Designer.vb">
+      <DependentUpon>PlayerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views Controls\PlayerInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Views Controls\PlayerInfoBar.Designer.vb">
+      <DependentUpon>PlayerInfoBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views Controls\PlayerInfoBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Views\FrmFirstRoll.resx">
+      <DependentUpon>FrmFirstRoll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Views Controls\DicePic.resx">
+      <DependentUpon>DicePic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmBoard.resx">
+      <DependentUpon>frmBoard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SetupBoard.resx">
+      <DependentUpon>SetupBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Views Controls\PlayerInfo.resx">
+      <DependentUpon>PlayerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Views Controls\PlayerInfoBar.resx">
+      <DependentUpon>PlayerInfoBar.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -122,7 +169,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\1 DICE.png" />
+    <None Include="resources\DiceOne.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\BoardPlacesnew.csv" />
@@ -151,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\BoardPlaces.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\DiceOne.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

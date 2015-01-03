@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmBoard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -355,7 +355,7 @@ Partial Class Form1
         Me.Cash1.TabIndex = 34
         Me.Cash1.Text = "Cash"
         '
-        'Form1
+        'frmBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -393,7 +393,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Cash2)
         Me.Controls.Add(Me.Cash4)
         Me.Controls.Add(Me.Cash1)
-        Me.Name = "Form1"
+        Me.Name = "frmBoard"
         Me.Text = "Form1"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
