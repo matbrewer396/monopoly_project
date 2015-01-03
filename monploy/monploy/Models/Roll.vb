@@ -81,6 +81,4 @@
 
 End Class
 
-Public Class dice
 
-End Class
