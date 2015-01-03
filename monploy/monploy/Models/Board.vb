@@ -30,7 +30,12 @@
             Return _players
         End Get
         Set(ByVal value As List(Of Player))
+            Dim i As Integer = value.Count
             _players = value
+            Do While i < 6
+                _players.Add(Player.NoPlayer)
+                i += 1
+            Loop
         End Set
     End Property
 
@@ -70,13 +75,16 @@
 
     Sub New(name As String, players As List(Of Player))
         Me.GameStatus = GameStatuses.NotStarted
+        Me.Players = players
     End Sub
 
     Sub StartGame()
-        Me.Players = players
         Me.GameStatus = GameStatuses.Started
         Me.loadBoardPlaces()
+
     End Sub
+
+
 
     Sub loadBoardPlaces()
 

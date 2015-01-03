@@ -63,16 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _1_DICE() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("_1_DICE", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property Board() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Board", resourceCulture)
@@ -92,14 +82,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to ,,,::STATION,,,With1Station,With2Station,With3Station,With4Station,,
-        '''Position ,SlotName,Groupying,Type,Cost,CostHouse,RentWithNoHouse,RentWith1House,RentWith2House,RentWith3House,RentWith4House,RentWithHotel
-        '''0,Go,NILL,GO,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
+        '''  Looks up a localized string similar to 0,Go,NILL,GO,NILL,NILL,-200,NILL,NILL,NILL,NILL,NILL
         '''1,Old Kent Road,Brown,STANDARD,60,120,6,40,80,160,240,1000
         '''2,Chest,NILL,CHEST,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
         '''3,White Chapel,Brown,STANDARD,60,120,6,40,80,160,240,1000
         '''4,Income tax,NILL,TAX,NILL,NILL,200,NILL,NILL,NILL,NILL,NILL
-        '''5,King&apos;s Cross [rest of string was truncated]&quot;;.
+        '''5,King&apos;s Cross station,Station,STATION,200,NILL,25,50,100,200,NILL,NILL
+        '''6,The Angel Iliston,Light_Blue,STANDARD,100,120,140,160,180,200,240,300
+        '''7,Chance,Chance,CHANCE,NILL,NILL,NILL,NILL,NILL,NILL,NILL,NILL
+        '''8,Eusto [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property BoardPlacesnew() As String
             Get

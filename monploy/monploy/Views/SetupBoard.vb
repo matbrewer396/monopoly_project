@@ -39,9 +39,15 @@
             MsgBox("More then two player is requied.", MsgBoxStyle.Critical, "More Players")
         End If
 
+        If LoadPlayer.Count > 6 Then
+            MsgBox("max of 6 player", MsgBoxStyle.Critical, "Too Many Players")
+        End If
+
         Dim b As New Board(txtPlayerName.Name, LoadPlayer)
 
         Dim boardForm As New frmBoard(b)
+        boardForm.Show()
+        Me.Dispose()
 
     End Sub
 End Class

@@ -355,7 +355,7 @@ Partial Class frmBoard
         Me.Cash1.TabIndex = 34
         Me.Cash1.Text = "Cash"
         '
-        'Form1
+        'frmBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -393,7 +393,7 @@ Partial Class frmBoard
         Me.Controls.Add(Me.Cash2)
         Me.Controls.Add(Me.Cash4)
         Me.Controls.Add(Me.Cash1)
-        Me.Name = "Form1"
+        Me.Name = "frmBoard"
         Me.Text = "Form1"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
