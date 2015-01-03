@@ -14,7 +14,7 @@
         End Set
     End Property
 
-    Private _BoardPlaces As List(Of BoardPlace)
+    Private _BoardPlaces As New List(Of BoardPlace)
     Public Property BoardPlaces() As List(Of BoardPlace)
         Get
             Return _BoardPlaces
@@ -74,6 +74,7 @@
 #End Region
 
     Sub New(name As String, players As List(Of Player))
+        _Name = name
         Me.GameStatus = GameStatuses.NotStarted
         Me.Players = players
     End Sub
@@ -87,9 +88,9 @@
 
 
     Sub loadBoardPlaces()
-
-        Dim sr As New IO.StreamReader("C:\Users\matt\git\monopoly_project\monploy\monploy\resources\BoardPlaces.txt")
-        Do While sr.ReadToEnd
+        Me.BoardPlaces = New List(Of BoardPlace)
+        Dim sr As New IO.StreamReader("C:\Users\matt\git\monopoly_project\monploy\monploy\resources\BoardPlacesnew.csv")
+        Do While Not sr.EndOfStream
             Dim l As String = sr.ReadLine
             Dim bp As New BoardPlace(l.Split(","))
             BoardPlaces.Add(bp)

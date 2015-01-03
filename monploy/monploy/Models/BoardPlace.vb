@@ -3,8 +3,39 @@
 #Region "Imported Property"
     'Phase array
     Sub New(i As String())
+        i = NillToNothing(i)
+        _Position = i(0)
+        _SlotName = i(1)
+        If Not IsNothing(i(2)) Then
+            _Grouping = [Enum].Parse(GetType(Groups), i(2))
+        End If
 
+        If Not IsNothing(i(3)) Then
+            _PlaceType = [Enum].Parse(GetType(PlaceTypes), i(3))
+        End If
+
+        _Cost = i(4)
+        _CostHotel = i(5)
+        _CostHouse = i(6)
+        _RentWithNoHouse = i(7)
+        _RentWith1House = i(8)
+        _RentWith2House = i(9)
+        _RentWith3House = i(10)
+        _RentWith4House = i(11)
+        ' _RentWithHotel = i(12)
     End Sub
+
+    Function NillToNothing(i As String())
+        Dim p As Integer = 0
+        For Each c As String In i
+            If c = "NILL" Then
+                i(p) = Nothing
+
+            End If
+            p += 1
+        Next
+        Return i
+    End Function
 
     Private _Position As Integer
     Public Property Position() As Integer
@@ -195,7 +226,6 @@
 
 
     Enum Groups
-        NILL
         GREEN
         BLUE
         BROWN

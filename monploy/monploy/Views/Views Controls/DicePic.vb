@@ -20,10 +20,13 @@
         End Set
     End Property
     Private Sub UserControl1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.picDiceImage.ImageLocation = Roll.GetImgPath(_dice, _DiceType)
+        updatePic()
     End Sub
 
-    Private Sub picDiceImage_Click(sender As Object, e As EventArgs) Handles picDiceImage.Click
-
+    Sub updatePic()
+        picDiceImage.ImageLocation = Roll.GetImgPath(_dice, _DiceType)
+        picDiceImage.Load()
     End Sub
+
+
 End Class
