@@ -1,5 +1,5 @@
 ﻿Public Class Roll
-    Private _Dice1 As String
+    Private _Dice1 = DiceRoll()
     Public Property Dice1() As Integer
         Get
             Return _Dice1
@@ -9,7 +9,7 @@
         End Set
     End Property
 
-    Private _Dice2 As Integer
+    Private _Dice2 = DiceRoll()
     Public Property Dice2() As Integer
         Get
             Return _Dice2
