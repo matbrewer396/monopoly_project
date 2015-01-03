@@ -68,13 +68,14 @@
 
 #End Region
 
-    Sub New(name As String)
+    Sub New(name As String, players As List(Of Player))
         Me.GameStatus = GameStatuses.NotStarted
     End Sub
 
-    Sub StartGame(players As List(Of Player))
+    Sub StartGame()
         Me.Players = players
         Me.GameStatus = GameStatuses.Started
+        Me.loadBoardPlaces()
     End Sub
 
     Sub loadBoardPlaces()
