@@ -30,4 +30,14 @@
         Return True
     End Function
 
+    Private Sub btnStartGame_Click(sender As Object, e As EventArgs) Handles btnStartGame.Click
+        If txtGameName.Text.Length < 3 Then
+            MsgBox("Game name is not validated", MsgBoxStyle.Critical, "Game Name")
+        End If
+
+        If LoadPlayer.Count < 2 Then
+            MsgBox("More then two player is requied.", MsgBoxStyle.Critical, "More Players")
+        End If
+
+    End Sub
 End Class
